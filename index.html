@@ -83,15 +83,12 @@
 
     /* ===== Buttons area ===== */
     .actions-wrap{
-      max-width:980px;
-      margin:10px auto 0;
-      padding:0 14px;
-      position:relative;
-      z-index:2;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:28px;
+  margin:20px auto;
+}
 
     /* ボタン：横幅小さめ＆パステル */
     .btn-wide{
@@ -230,6 +227,31 @@
     margin: 0 auto !important;
   }
 }
+    .sns-btn{
+    width:54px;
+    height:54px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#7a6773;
+    text-decoration:none;
+    transition:.2s;
+}
+
+.sns-btn:hover{
+    transform:scale(1.1);
+}
+
+.sns-btn svg{
+    width:34px;
+    height:34px;
+}
+
+.heart{
+    font-size:34px;
+    color:#ff8db7;
+    line-height:1;
+}
   </style>
 </head>
 
@@ -246,21 +268,40 @@
     <a class="hotspot" href="levy.html"    style="left:70%; top:56%; width:16%; height:16%;"></a>
   </div>
 
-  <!-- 上：リルリル診断 / 下：Instagram -->
-  <div class="actions-wrap">
-   <a class="btn-wide quiz-gradient"
-   href="https://chocofluffy222.github.io/LilLilu-test2026/"
-   style="width:320px; max-width:320px; margin:0 auto; display:flex; justify-content:center;">
-  リルリル診断へ
-</a>
+ <div class="actions-wrap">
 
-<a class="btn-wide ig-gradient"
-   href="https://www.instagram.com/chocofluffy_222"
-   target="_blank" rel="noopener"
-   style="width:320px; max-width:320px; margin:0 auto; display:flex; justify-content:center;">
-  Instagramを見る
-</a>
-  </div>
+  <!-- 診断 -->
+  <a href="https://chocofluffy222.github.io/LilLilu-test2026/" class="sns-btn" aria-label="診断">
+    <span class="heart">❤</span>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/chocofluffy_222"
+     target="_blank"
+     rel="noopener"
+     class="sns-btn"
+     aria-label="Instagram">
+
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm11 2a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2.2A2.8 2.8 0 1012 15a2.8 2.8 0 000-5.6z"/>
+    </svg>
+
+  </a>
+
+  <!-- YouTube -->
+  <a href="https://www.youtube.com/"
+     target="_blank"
+     rel="noopener"
+     class="sns-btn"
+     aria-label="YouTube">
+
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.8 2.5 12 2.5 12 2.5h0s-4.8 0-8.2.3c-.5.1-1.5.1-2.4 1C.7 4.5.5 6.2.5 6.2S0 8.2 0 10.3v1.4c0 2.1.5 4.1.5 4.1s.2 1.7.9 2.4c.9.9 2 .9 2.5 1 1.8.2 8.1.3 8.1.3s4.8 0 8.2-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4s.5-2 .5-4.1v-1.4c0-2.1-.5-4.1-.5-4.1zM9.5 15V8.8l6 3.1-6 3.1z"/>
+    </svg>
+
+  </a>
+
+</div>
 
   <footer class="copyright">
     © 2026 chocofluffy
