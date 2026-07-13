@@ -247,10 +247,11 @@
     height:34px;
 }
 
-.heart{
-    font-size:34px;
-    color:#ff8db7;
-    line-height:1;
+.tent-icon{
+  width:36px;
+  height:36px;
+  display:block;
+  color:inherit;
 }
   </style>
 </head>
@@ -271,9 +272,57 @@
  <div class="actions-wrap">
 
   <!-- 診断 -->
-  <a href="https://chocofluffy222.github.io/LilLilu-test2026/" class="sns-btn" aria-label="診断">
-    <span class="heart">❤</span>
-  </a>
+  <!-- リルリル診断：サーカステント -->
+<a href="https://chocofluffy222.github.io/LilLilu-test2026/"
+   class="sns-btn"
+   aria-label="リルリル診断">
+
+  <svg class="tent-icon"
+       viewBox="0 0 64 64"
+       role="img"
+       aria-hidden="true">
+
+    <!-- 旗 -->
+    <path d="M32 5V16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"/>
+
+    <path d="M33 6L45 10L33 14Z"
+          fill="currentColor"/>
+
+    <!-- テント上部 -->
+    <path d="M32 15L8 37H56L32 15Z"
+          fill="currentColor"/>
+
+    <!-- ストライプの切り込み -->
+    <path d="M32 18L25 37H31L32 18Z"
+          fill="white"
+          opacity=".75"/>
+
+    <path d="M32 18L39 37H33L32 18Z"
+          fill="white"
+          opacity=".75"/>
+
+    <!-- テント本体 -->
+    <path d="M11 37H53L57 58H7L11 37Z"
+          fill="currentColor"/>
+
+    <!-- 入口 -->
+    <path d="M24 58V48C24 42.5 27.6 39 32 39C36.4 39 40 42.5 40 48V58Z"
+          fill="white"
+          opacity=".9"/>
+
+    <!-- 裾 -->
+    <path d="M7 58H57"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"/>
+  </svg>
+
+</a>
 
   <!-- Instagram -->
   <a href="https://www.instagram.com/chocofluffy_222"
