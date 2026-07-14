@@ -280,6 +280,45 @@ body::before{
   display:block;
   color:inherit;
 }
+    /* ===== プロフィール案内画像 ===== */
+.profile-guide{
+  position:absolute;
+
+  /* 横方向の中央 */
+  left:50%;
+
+  /* メイン画像の下方に配置 */
+  bottom:3%;
+
+  /* 案内画像の大きさ */
+  width:clamp(170px, 28%, 310px);
+  height:auto;
+
+  /* ホットスポットより前に表示 */
+  z-index:5;
+
+  /* 案内画像がタップ操作を邪魔しないようにする */
+  pointer-events:none;
+
+  /* 上下にふわっと動かす */
+  animation:profileFloat 2.8s ease-in-out infinite;
+
+  /* 少し柔らかく見せる */
+  filter:drop-shadow(0 6px 10px rgba(120,80,120,.18));
+}
+
+
+/* 上下にふわっと動くアニメーション */
+@keyframes profileFloat{
+  0%,
+  100%{
+    transform:translate(-50%, 0);
+  }
+
+  50%{
+    transform:translate(-50%, -12px);
+  }
+}
    
   </style>
 </head>
@@ -325,6 +364,13 @@ body::before{
    href="levy.html"
    style="left:63%; top:50%; width:12%; height:11%;"></a>
   </div>
+
+<!-- プロフィール案内画像 -->
+<img
+  src="profile-touch.png"
+  alt="お顔にタッチしてプロフィールを見てみてね"
+  class="profile-guide"
+/>
 
  <div class="actions-wrap">
 
