@@ -25,31 +25,45 @@
     body{
       margin:0;
       font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
-      background:
-        radial-gradient(circle at top left,
-          rgba(255, 220, 235, 0.95) 0%,
-          rgba(255, 220, 235, 0.55) 35%,
-          transparent 62%
-        ),
-        radial-gradient(circle at bottom right,
-          rgba(210, 220, 255, 0.95) 0%,
-          rgba(210, 220, 255, 0.55) 35%,
-          transparent 62%
-        ),
-        linear-gradient(180deg,#ffeaf3 0%,#efe7ff 55%,#e9f2ff 100%);
-      padding-bottom:60px;
-    }
-    /* 背景のふわ光（ハートがここなら、z-index都合で薄く見えることあり）*/
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(255,255,255,.32), transparent 42%),
-        radial-gradient(circle at 70% 80%, rgba(255,255,255,.22), transparent 46%);
-      pointer-events:none;
-      z-index:0;
-    }
+     background:
+  radial-gradient(
+    circle at 8% 10%,
+    rgba(255, 226, 160, .95) 0%,
+    transparent 32%
+  ),
+
+  radial-gradient(
+    circle at 88% 12%,
+    rgba(255, 178, 158, .92) 0%,
+    transparent 34%
+  ),
+
+  radial-gradient(
+    circle at 12% 88%,
+    rgba(255, 214, 234, .92) 0%,
+    transparent 36%
+  ),
+
+  radial-gradient(
+    circle at 90% 78%,
+    rgba(222, 206, 255, .92) 0%,
+    transparent 34%
+  ),
+
+  radial-gradient(
+    circle at 50% 100%,
+    rgba(205, 236, 255, .95) 0%,
+    transparent 42%
+  ),
+
+  linear-gradient(
+    180deg,
+    #ffe8a8 0%,
+    #ffbda9 22%,
+    #ffd8ea 48%,
+    #e8dcff 72%,
+    #d8f1ff 100%
+  );
 
     .stage{
       position:relative;
