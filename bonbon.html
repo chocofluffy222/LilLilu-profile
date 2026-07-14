@@ -4,89 +4,224 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ボンボン</title>
-  <style>
-  body{
-  margin:0;
-  min-height:100vh;
-  font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(255,255,255,.32), transparent 42%),
-    radial-gradient(circle at 70% 80%, rgba(255,255,255,.22), transparent 46%);
-  pointer-events:none;
-  z-index:0;
-}
-  background:
-    radial-gradient(circle at top left,
-      rgba(255,220,235,.95) 0%,
-      rgba(255,220,235,.55) 35%,
-      transparent 62%
-    ),
-    radial-gradient(circle at bottom right,
-      rgba(210,220,255,.95) 0%,
-      rgba(210,220,255,.55) 35%,
-      transparent 62%
-    ),
-    linear-gradient(180deg,#ffeaf3 0%,#efe7ff 55%,#e9f2ff 100%);
-}
-    .wrap{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding:40px 20px;
-  position:relative;
-  z-index:1;
-}
-    .img{
-  width:min(92vw,560px);
-  height:auto;
-  display:block;
-  transform:translateY(25px);
-}
-    .back{display:inline-block;margin:12px 0 0;color:#6b5b57;text-decoration:none;font-weight:700;}
-  .heart{
-  position:fixed;
-  width:32px;
-  height:32px;
-  pointer-events:none;
-  opacity:0;
-  transform:translate(-50%,-50%);
-  animation:heartPop 1.6s ease-out forwards;
-  filter:
-    drop-shadow(0 0 6px rgba(255,180,200,.95))
-    drop-shadow(0 0 18px rgba(255,140,180,.7));
-  z-index:3;
-}
 
-@keyframes heartPop{
-  0%{opacity:0;transform:translate(-50%,-50%) scale(.45);}
-  20%{opacity:1;}
-  100%{
-    opacity:0;
-    transform:
-      translate(calc(-50% + var(--dx)),
-                calc(-50% + var(--dy)))
-      scale(1.35);
-  }
-}
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    html,
+    body{
+      margin:0;
+      min-height:100%;
+    }
+
+    body{
+      min-height:100vh;
+      font-family:
+        system-ui,
+        -apple-system,
+        "Hiragino Sans",
+        "Noto Sans JP",
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(255,220,235,.95) 0%,
+          rgba(255,220,235,.55) 35%,
+          transparent 62%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          rgba(210,220,255,.95) 0%,
+          rgba(210,220,255,.55) 35%,
+          transparent 62%
+        ),
+        linear-gradient(
+          180deg,
+          #ffeaf3 0%,
+          #efe7ff 55%,
+          #e9f2ff 100%
+        );
+
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+
+      background:
+        radial-gradient(
+          circle at 30% 20%,
+          rgba(255,255,255,.32),
+          transparent 42%
+        ),
+        radial-gradient(
+          circle at 70% 80%,
+          rgba(255,255,255,.22),
+          transparent 46%
+        );
+
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      padding:24px 18px 20px;
+      position:relative;
+      z-index:1;
+    }
+
+    .img{
+      width:min(92vw,560px);
+      height:auto;
+      display:block;
+      border-radius:18px;
+
+      /* 中央より、ほんの少しだけ下 */
+      transform:translateY(6px);
+
+      box-shadow:
+        0 12px 30px rgba(180,160,200,.22);
+    }
+
+    .back{
+      display:inline-block;
+      margin-top:18px;
+      color:#6b5b57;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    /* 飛ぶハート */
+    .heart{
+      position:fixed;
+      width:32px;
+      height:32px;
+      pointer-events:none;
+      opacity:0;
+
+      transform:translate(-50%,-50%);
+      animation:heartPop 1.6s ease-out forwards;
+
+      filter:
+        drop-shadow(0 0 6px rgba(255,180,200,.95))
+        drop-shadow(0 0 18px rgba(255,140,180,.7));
+
+      z-index:3;
+    }
+
+    @keyframes heartPop{
+      0%{
+        opacity:0;
+        transform:
+          translate(-50%,-50%)
+          scale(.45);
+      }
+
+      20%{
+        opacity:1;
+      }
+
+      100%{
+        opacity:0;
+        transform:
+          translate(
+            calc(-50% + var(--dx)),
+            calc(-50% + var(--dy))
+          )
+          scale(1.35);
+      }
+    }
   </style>
 </head>
-<body>
-  <div class="wrap">
-    <img class="img" src="05bonbon.png" alt="ボンボン" />
-    <a class="back" href="index.html">← もどる</a>
-  </div>
-  <script>
-function startAutoHeart(){
-・・・
-}
 
-startAutoHeart();
-</script>
+<body>
+
+  <div class="wrap">
+    <img
+      class="img"
+      src="05bonbon.png"
+      alt="ボンボン"
+    />
+
+    <a class="back" href="index.html">
+      ← もどる
+    </a>
+  </div>
+
+  <script>
+    function startAutoHeart(){
+      const min = 1600;
+      const max = 3000;
+
+      function spawn(){
+        const heart = document.createElement("div");
+        heart.className = "heart";
+
+        /* 画面中央付近から出す */
+        const offsetX = Math.random() * 240 - 120;
+        const offsetY = Math.random() * 200 - 100;
+
+        heart.style.left = `calc(50vw + ${offsetX}px)`;
+        heart.style.top = `calc(50vh + ${offsetY}px)`;
+
+        /* 飛んでいく方向 */
+        heart.style.setProperty(
+          "--dx",
+          `${Math.random() * 140 - 70}px`
+        );
+
+        heart.style.setProperty(
+          "--dy",
+          `${-(Math.random() * 90 + 120)}px`
+        );
+
+        heart.innerHTML = `
+          <svg
+            viewBox="0 0 24 24"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          >
+            <path
+              fill="rgba(255,170,200,1)"
+              d="M12 21s-6.7-4.6-9.5-8.2
+                 C.6 10.4 1.1 6.9 4.1 5.4
+                 6.1 4.4 8.4 5.2 9.6 7
+                 c1.2-1.8 3.5-2.6 5.5-1.6
+                 3 1.5 3.5 5 1.6 7.4
+                 C18.7 16.4 12 21 12 21z"
+            />
+          </svg>
+        `;
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 1700);
+
+        const nextTime =
+          Math.random() * (max - min) + min;
+
+        setTimeout(spawn, nextTime);
+      }
+
+      setTimeout(spawn, 700);
+    }
+
+    startAutoHeart();
+  </script>
+
 </body>
 </html>
