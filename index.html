@@ -280,46 +280,33 @@ body::before{
   display:block;
   color:inherit;
 }
-    /* ===== プロフィール案内画像 ===== */
+   /* ===== プロフィール案内画像 ===== */
 .profile-guide{
   position:absolute;
 
-  /* 横方向の中央 */
-  left:50%;
+  /* YouTubeアイコンの少し上あたり */
+  right:5%;
+  bottom:14%;
 
-  /* メイン画像の下方に配置 */
-  bottom:3%;
-
-  /* 案内画像の大きさ */
-  width:clamp(170px, 28%, 310px);
+  width:clamp(150px, 22%, 250px);
   height:auto;
 
-  /* ホットスポットより前に表示 */
   z-index:5;
-
-  /* 案内画像がタップ操作を邪魔しないようにする */
   pointer-events:none;
 
-  /* 上下にふわっと動かす */
   animation:profileFloat 2.8s ease-in-out infinite;
 
-  /* 少し柔らかく見せる */
   filter:drop-shadow(0 6px 10px rgba(120,80,120,.18));
 }
 
-
-/* 上下にふわっと動くアニメーション */
 @keyframes profileFloat{
-  0%,
-  100%{
-    transform:translate(-50%, 0);
+  0%,100%{
+    transform:translateY(0);
   }
-
   50%{
-    transform:translate(-50%, -12px);
+    transform:translateY(-10px);
   }
 }
-   
   </style>
 </head>
 
